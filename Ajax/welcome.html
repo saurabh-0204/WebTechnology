@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+          function createAjaxObject(){
+            try {
+                 var ajax=new XMLHttpRequest();
+                 return ajax;
+            } catch (e) {
+                try {
+                    var ajax=new ActiveXObject("microsoft.XMLHTTP");
+                 return ajax;
+                } catch (eb) {
+                    alert("Ajax is not supported");
+                }
+            }
+          }
+
+          function makeRequest(){
+            ajax=createAjaxObject();
+            if(ajax){
+                alert("Ajax object created");
+            }
+            var url="http://localhost:9000/welcome?name="+document.getElementById("nameid").value;
+            alert(url);
+            ajax.open("GET",url,true);
+            ajax.onreadystatechange=updatePage;
+            ajax.send("");
+           
+          }
+
+          function updatePage(){
+                      alert(ajax.readyState);
+                      if (ajax.readyState==4) {
+                        document.getElementById("msg").innerHTML=ajax.responseText;
+                      } 
+                      
+          }
+    </script>
+</head>
+<body>
+  <form action="">
+    Enter Your Name
+    <input type="text" name="name" id="nameid" placeholder="Enter Your Name"><br> 
+     <input type="button" value="Submit" onclick="makeRequest()">  
+ <div id="msg"></div>
+</form>
+      <div id="msg"></div>
+</body>
+</html>

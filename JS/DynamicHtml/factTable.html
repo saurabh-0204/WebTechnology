@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factTable</title>
+</head>
+<body>
+    <form >
+        <table>
+            <tr>
+                <td>
+                    <label for="fact">Enter number</label>
+                </td>
+                <td  >
+                    <input type="number" name="num" id="fact">
+                </td >
+            </tr>
+            <tr style="margin-left: 50px;">
+                <td >
+                    <input type="button" value="Factorial Table" onclick="table(num.value)">
+                </td>
+            </tr>
+        </table>
+    </form>
+<script>
+    function factorial(num){
+            let fact=1;
+            for(let i=1;i<=num;i++){
+                 fact*=i;
+            }
+            return fact;
+        }
+    function table(num){
+        var str="<table style=background-color:aqua ; border='2px'>"
+            str+="<thead><td>Number</td><td>Factorial</td></thead>";
+          console.log(num);
+          var fact=1;
+        for(let i=1;i<=num;i++)
+        {
+             str+="<tr>";
+                str+="<td>";
+                     str+=i;
+                str+="</td>";
+                str+="<td>";
+                       str+=""+factorial(i);
+                       console.log(fact);
+                str+="</td>";
+            str+="<tr>";  
+        }
+        str+="</table>"
+        document.getElementById("output").innerHTML=str;
+        console.log(str);
+
+    }
+</script>
+    <div id="output"></div>
+</body>
+</html>

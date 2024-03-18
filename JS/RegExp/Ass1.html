@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function validatedata()
+    {
+        //validate uid
+        //var uid = document.getElementById("uid").value;
+        //hierachical way
+        var uid = document.f1.uid.value;   //f1.uid-name
+        var uidpattern = /^[\w.-]{8,15}$/
+        if(!uidpattern.test(uid))
+        {
+            //alert("uid length should be 8-15 chars");
+            document.getElementById("uiderror").innerHTML = "uid length should be 8-15 chars"
+            document.f1.uid.value = "";
+            document.f1.uid.focus();
+            return;
+        }
+        else
+        {
+            document.getElementById("uiderror").innerHTML = "";
+        }
+        //validate pwd
+        var pwd = document.f1.pwd.value;
+        var pwdpattern = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&])[A-Za-z0-9!@#$%^&*]{5,}$/
+        if(!pwdpattern.test(pwd))
+        {
+            document.getElementById("pwderror").innerHTML = "Invalid Password"
+            document.f1.pwd.value="";
+            document.f1.pwd.focus();
+            return;
+        }
+        else
+        {
+            document.getElementById("pwderror").innerHTML ="";
+        }
+        //validate gender
+        //alert(document.f1.gender.value);
+        if(document.f1.gender.value == "")
+        {
+            alert("Select gender");
+            return;
+        }
+        //all fields are correct
+        document.f1.submit();
+    }
+    
+    </script>
+</head>
+<body>
+    <form name="f1" id="f1" >
+        Enter uid :
+        <input type="text" name="uid" id="uid" 
+        />
+        <span id="uiderror" style="color:red"></span>
+        <br/>
+        Enter password :
+        <input type="password" name="pwd" id="pwd" />
+        <span id="pwderror" style="color:red"></span>
+        <br/>
+        Select gender : 
+        <input type="radio" name="gender" value="M" />
+        Male
+        <input type="radio" name="gender" value="F" />
+        Female
+        <br/>
+        <input type="button" value="Login"
+        onclick="validatedata()" />
+        <input type="reset" value="Cancel" />
+    </form>
+</body>
+</html>

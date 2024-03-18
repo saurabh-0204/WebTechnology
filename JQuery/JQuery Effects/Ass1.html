@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("#hide").click(function() {
+                $("img").hide("slow",function(){
+                    alert("Image is hidden");
+                })
+            })
+            $("#show").click(function(){
+                $("img").show();
+            })
+
+            $("#toggle").click(function(){
+                $("img").toggle(3000);
+            })
+            })
+    </script>
+</head>
+<body>
+   <img src="../Lighthouse.jpeg" height="400px" width="400px"/>
+    <button id="hide"> Hide </button>
+    <button id="show"> Show </button>
+    <button id="toggle"> Toggle </button>
+</body>
+</html>

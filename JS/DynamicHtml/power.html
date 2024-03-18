@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>power</title>
+    <script>
+        function power(x,y){
+            console.log(x,y);
+            var power=1;
+            for(let i=1;i<=y;i++){
+                  power*=x;
+                  console.log(power);
+            }
+
+            document.getElementById("output").innerHTML=x+" to the power "+y+" is "+power;
+            console.log(power);
+            alert(power);
+        }
+      
+    </script>
+</head>
+<body>
+    <form  >
+        <table border="2px" style="background-color: rgb(255, 77, 0);">
+            <tr>
+                <td>
+                    <label for="base">Enter Base Number :</label>
+                </td>
+                <td style="background-color: antiquewhite;">
+                    <input type="number" name="num1" id="base">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="exp">Enter Exponent Number</label></td>
+                <td style="background-color: antiquewhite;"><input type="number" name="num2" id="exp"></td>
+            </tr>
+            <tr><td><input type="button" value="submit" onclick="power(num1.value,num2.value)"></td></tr>
+        </table>
+    </form>
+    <div id="output"></div>
+  
+   
+</body>
+</html>

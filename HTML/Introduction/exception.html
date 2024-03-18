@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception</title>
+</head>
+<body>
+    <h2 style="text-align: center;background-color: violet;"> Exception Handling</h2>
+    <a href="#custom">Custom Exception</a>
+    <p>Java provides specific keywords for exception handling purposes. <br>
+        throw – We know that if an error occurs,<br/> an exception object is getting created and then Java runtime starts processing to handle them. Sometimes we might want to generate exceptions explicitly in our code. For example, in a user authentication program, we should throw exceptions to clients if the password is null. The throw keyword is used to throw exceptions to the runtime to handle it.
+        throws – When we are thro
+        <br/>wing an exception in a method and not handling it, then we have to use the throws keyword in the method signature to let the caller  <br>program know the exceptions that might be thrown by the method. The caller method might handle these exceptions or propagate them to its caller method using the throws keyword. We can provide multiple exceptions in the throws clause, and it can be used with the main() method also.
+        try-catch – We use the try-catch block for exception handling in our code. try is the start of the block and catch is at the end of the try block to handle the exceptions. We can have multiple catch blocks with a try block. The try-catch block can be nested too. The catch block requires a parameter that should be of type Exception.</p>
+        / class representing custom exception  
+        class InvalidAgeException  extends Exception  
+        {  
+            public InvalidAgeException (String str)  
+            {  
+                // calling the constructor of parent Exception  
+                super(str);  
+            }  
+        }  <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore quod laborum. Commodi sint voluptatum animi repellendus neque cum, consequatur corrupti voluptate praesentium beatae aut illum molestiae necessitatibus minus aperiam.  
+        // class that uses custom exception InvalidAgeExcep
+        <br>tion  
+        public class TestCustomException1  
+        {  
+          <br>
+            // method to check the age  
+            static void validate (int age) throws InvalidAgeException{    
+               if(age < 18){  
+          
+                // throw an object of user defined exception  
+                throw new InvalidAgeException("age is not valid to vote");    
+            }  
+               else {   
+                System.out.println("welcome to vote");   
+                }   
+             }    
+          
+            // main method  
+            public static void main(String args[])  
+            {  
+                try  
+                {  
+                    // calling the method   
+                    validate(13);  
+                }  
+                catch (InvalidAgeException ex)  
+                {  
+                    System.out.println("Caught the exception");  
+            <br>
+                    // printing the message from InvalidAgeException object  
+                    System.out.println("Exception occured: " + ex);  
+                }  
+          
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minima, cum vitae, deleniti iste aliquid est nobis libero maxime quis, incidunt a ipsum at temporibus dolorem dolore harum optio? Quisquam!
+                System.out.println("rest of the code...");    
+            }  
+            Lorem ipsum dolor sit amet consectetur adipis
+            icing elit. Earum, minus accusantium cupiditate sed quod doloremque aliquam veritatis, aperiam dolores quis sit, pariatur nesciunt! Laudantium illo asperiores commodi tenetur, iste ipsam!
+        }  
+        <a href="custom"></a>
+        <p >Java Custom Exception
+            In Java, we can create our own exceptions that are derived classes of the Exception class. Creating our own Exception is known as custom exception or user-defined exception. Basically, Java custom exceptions are used to customize the exception according to user need.
+            
+            Consider the example 1 in which InvalidAgeException class extends the Exception class.
+            
+            Using the custom exception, we can have your own exception and message. Here, we have passed a string to the constructor of superclass i.e. Exception class that can be obtained using getMessage() method on the object we have created.
+            
+            In this section, we will learn how custom exceptions are implemented and used in Java programs.
+            
+            Backward Skip 10s
+            
+            Play Video
+            
+            Forward Skip 10</p>
+</body>
+</html>

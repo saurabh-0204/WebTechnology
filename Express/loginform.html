@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    /* Basic styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body  background="html.png">
+
+<form action="http://localhost:9000/logincheck" id="first">
+        <table>
+            <tr>
+                <td> <label for="uidtext">Enter uid : </label> </td>
+                <td> <input type="text" name="uid" id="uidtext" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="pwdtext">Enter password : </label> </td>
+                <td> <input type="password" name="pwd" id="pwdtext" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="LOGIN" /></td>
+                <td><input type="reset" value="CLEAR" /></td>
+            </tr>           
+            
+        </table>
+    </form>
+
+</body>
+</html>

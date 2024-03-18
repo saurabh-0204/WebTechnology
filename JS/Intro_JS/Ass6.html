@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <script>
+        function factorial(num){
+            let fact=1;
+            for(let i=1;i<=num;i++){
+                 fact*=i;
+            }
+            document.getElementById("output").innerHTML="Factorial = "+fact;
+            //document.write("Factorial = "+fact);
+            alert("Factorial = "+fact);
+        }
+    </script>
+    <form >
+        <table>
+            <tr>
+                <td>Enter number : </td>
+                <td><input type="number" name="num"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Enter" onclick="factorial(num.value)">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="output"></div>
+</body>
+</html>

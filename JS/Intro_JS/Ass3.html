@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patern</title>
+    <script>
+        function drawPattern(num){
+         var   patt="";
+               for(let i=1;i<=num;i++){
+                   for(let j=1;j<=i;j++){
+                          patt+=j+" ";
+                             console.log(patt);
+                   }
+                   patt+="</br>";
+               }
+               document.getElementById("output").innerHTML =patt;
+               console.log(patt);
+        }
+</script>
+</head>
+<body>
+  <form >
+       <table style="text-align: center;">
+        <tr>
+            <td>
+               Eneter Number for Patern:
+            </td>
+            <td>
+               <input type="number" name="num"/>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="patern" onclick="drawPattern(num.value)"/></td>
+          </tr>
+       
+       </table>
+  </form>
+  
+  <div id="output"></div>
+</body>
+</html>

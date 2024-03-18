@@ -1,0 +1,72 @@
+<html>
+<head>
+    <script>
+        //1. catch the event
+        function makeRequest(){
+            //2. create ajaxa object
+            ajax = createAjaxObject();  //Calls the createAjaxObject function to create an XMLHttpRequest object.
+            if(ajax)
+                alert("ajax created");
+            var url = "http://localhost:9000/getEmpDetails?empid="+document.getElementById("empid").value; //Constructs a URL by appending the value
+                                                                                            //of the input field with the id "empid" to a base URL.
+            alert(url);
+            //5.checking whether reposnse received
+            ajax.onreadystatechange = updatePage; //Sets up the onreadystatechange event handler to call
+                                                    // the updatePage function when the state of the XMLHttpRequest changes.
+            //3. initialize the request
+            ajax.open("GET",url,true);
+            //4.send the request
+            ajax.send("");      
+
+        }
+
+        function updatePage()
+        {
+            alert(ajax.readyState);
+            if(ajax.readyState == 4)  //Checks if the readyState is equal to 4 (which means the request is complete).
+            {
+                //If true, updates the HTML content of the element with the id "info" with the response text received from the server.
+                    document.getElementById("info").innerHTML = ajax.responseText;
+            }
+        }
+        
+        function createAjaxObject()
+        {
+            try{
+                //chrome and other browsers
+                //Tries to create an XMLHttpRequest object using the standard new XMLHttpRequest() constructor.
+                var ajax = new XMLHttpRequest();
+                return ajax;
+            }
+            catch(e)
+            {
+                try{
+                    //for IE-Internet Explorer
+                    //If successful, returns the created object.
+                    var ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                    return ajax;
+                }
+                catch(e)
+                {
+                    alert("ajax not supported");
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1> Emp Form </h1>
+    <form>
+        Enter Empid : 
+        <input type="text" name="empid" id="empid"/>
+        <br/>
+        <input type="button" value="Get Details"
+        onclick="makeRequest()" />
+
+    </form>
+
+    <br/>
+    <div id="info"></div>
+</body>
+</html>

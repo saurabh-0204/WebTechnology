@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass4</title>
+</head>
+<body>
+    <div style="border: 2px solid;border-color: aqua ;width: 550px;">
+        <h3 style="color: red;"><i>Express Registration</i></h3>
+Please note that all fields that have an asterisk(<span style="color: red;">*</span>) are required  process your Registration.
+<form >
+    <table style="border-collapse: collapse;border-color: white;" border="0" cellspacing="0">
+        <thead>
+            <tr style="background-color: rgb(207, 202, 202);">
+                <td  colspan="2">Personal Details</td>
+                <td colspan="2">Adress</td>  
+        </thead>
+    </tr>
+    <tr  >
+       <td><label for="name">Title:</label></td>
+       <td>
+        <input type="text"style="background-color: lightblue;" name="title" id="name"><br>
+                (Mr/Mrs/Miss)
+        </td>
+       <td><label for="add">Address:</label></td>
+       <td style="color: red;"><input type="text" style="background-color: lightblue;" name="add">*</td>
+    </tr>
+         <tr>
+            <td>
+                <label for="name">First Name:</label>
+            </td>
+            <td style="color: red;">
+                <input type="text" style="background-color: lightblue;" name="user" id="name"><br>*
+            </td>
+            <td></td>
+            <td><input type="text" style="background-color: lightblue;"></td>
+         </tr>
+         <tr>
+            <td>
+                <label for="name">Last Name:</label>
+            </td>
+            <td style="color: red;">
+                <input type="text" style="background-color: lightblue;" name="user" id="name"><br>*
+            </td>
+            <td ><label for="town">Town:</label></td>
+            <td style="color: red;"><input type="text" style="background-color: lightblue;" name="twn" id="town">*</td>
+         </tr>
+         <tr>
+            <td>
+                <label for="name">Email Adress:</label>
+            </td>
+            <td style="color: red;">
+                <input type="email" style="background-color: lightblue;" name="mail" id="name"><br>*
+            </td>
+            <td ><label for="state">Country/State:</label></td>
+            <td style="color: red;"><input type="text" style="background-color: lightblue;" name="place" id="state">*</td>
+         </tr>
+         <tr>
+            <td>
+                <label for="phone">TelePhone</label>
+            </td>
+            <td style="color: red;">
+                <input type="number" style="background-color: lightblue;" name="num"><br>*
+            </td>
+            <td><label for="country">Country:</label></td>
+            <td style="color: red;"><select name="cName" id="">
+                <option value="a1" >Australia</option>
+                <option value="a2">India</option>
+                <option value="a2">NewYork</option>
+                <option value="a3">England</option>
+                <option value="a4">USA</option>
+            </select>*</td>
+         </tr>
+         <tr>
+            <td><label for="num">CellPhone:</label></td>
+            <td ><input type="number" style="background-color: lightblue;" name="CellPhone" id="num"></td>
+            <td><label for="pin">PostCode:</label></td>
+            <td style="color: red;"><input type="number" style="background-color: lightblue;" name="Code" id="pin">*</td>
+         </tr>
+         <tr>
+            <td><label for="msg">Comment:</label></td>
+         <td colspan="3">
+            <textarea name="comm" id="msg" style="background-color: lightblue;" cols="60" rows="5"></textarea>
+         </td>
+         </tr>
+         <tr  style="border: 3px solid rgb(0, 128, 126)">
+         <td >
+            <label for="review">Feedback:</label>
+         </td>
+         <td><input type="text" style="background-color: lightblue;" name="Feedback" id="review"></td>
+         <td><label for="tick">Hear us from?</label></td>
+         <td><input type="checkbox" name="frd" value="Freind">Freind 
+            <input type="checkbox" name="owner" value="SOner">Site Owner
+            <br>
+            <input type="checkbox" name="Engine" value="se">Search Engine
+        </td>
+        </tr>
+        <tr style="background-color: gray;">
+            <td colspan="4">Security Details</td>
+        </tr>
+         <tr >
+            <td><label for="pass">Choose <br>Password:</label></td>
+            <td style="color: red;"><input type="text" style="background-color: lightblue;"name="password" id="pass"><br>*</td>
+            <td> <label for="confirm">confirm <br>Password:</label></td>
+            <td><input type="text" style="background-color: lightblue;" name="password" id="confirm"></td>
+         </tr>
+    </table>
+</form>
+
+    </div>
+</body>
+</html>

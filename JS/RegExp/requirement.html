@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password">
+        <input type="button" name="btn" id="mysubmit" value="Show Password" onclick="validate()">
+    </form>
+</body>
+
+</html>
+<script>
+
+    var cnt = 0;
+    function validate() {
+        if (cnt == 0) {
+            cnt++;
+            document.getElementById("mysubmit").value = "Hide Password";
+            document.getElementById("password").type="text";
+            return;
+
+        }
+        else {
+            if (cnt == 1) {
+                document.getElementById("mysubmit").value = "Show Password";
+                document.getElementById("password").type="password";
+                cnt--;
+            }
+        }
+    }
+
+</script>

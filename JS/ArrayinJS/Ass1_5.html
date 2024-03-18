@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.5</title>
+</head>
+<body>
+    <script>
+         var arr=[7,4,1,6,8,34];
+         var sum=arr.reduce(function(a,b){return a+b});
+         document.write("Sum of elements "+sum.toString());
+
+         var max=arr.reduce((s,v)=> s>v?s:v);
+         document.write("</br> Max of Array "+max.toString());
+
+         var min=arr.reduce((s,v)=> s<v?s:v);
+         document.write("</br> Min of Array "+min.toString());
+   
+         var avg=sum/arr.length;
+         document.write("</br> Average of Array "+avg.toString());
+
+    </script>
+</body>
+</html>

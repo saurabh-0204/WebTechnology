@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #tableid{
+            border: 1px solid black;
+            
+        }
+        .image{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <table id="tableid">
+        <tr>
+            <td id="td1">
+                <img class="image" id="img1" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image" id="img3" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image"  id="img3" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="image" id="img4" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image" id="img5" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image" id="img6" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="image" id="img7" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image" id="img8" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+            <td>
+                <img class="image" id="img9" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+<script>
+
+    $("img").mouseup(function(){
+        $(this).fadeIn();
+    })
+    $("img").mousedown(function(){
+        $(this).fadeOut();
+    })
+
+</script>

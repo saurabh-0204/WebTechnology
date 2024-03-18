@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime</title>
+</head>
+<body>
+    <script>
+         var arr=[2,11,8,12,24,32];
+         var prime=arr.every(function(v)
+         { var cnt=0;
+                       for(let i=1;i<=v;i++){
+                        if(v%i==0)
+                        {
+                            cnt++;
+                        }
+                       }
+                       console.log(cnt);
+                       if (cnt==2) {
+                        return true;
+                       } else {
+                          return false;
+                       
+                       }  
+                    }
+         )
+         
+         var even=arr.every(v=>v%2==0);
+         var even=arr.every(v=>v%2==0);
+         var odd=arr.every(v=>v%2==1);
+         document.write("All Numbers Are Prime "+prime);
+         document.write("<br/> All Numbers Are Even  "+even);
+         document.write("<br/>  All Numbers Are odd "+odd);
+
+
+  </script>
+</body>
+</html>

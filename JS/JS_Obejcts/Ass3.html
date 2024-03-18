@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function dispTime()
+        {
+            var cdate = new Date();
+            var hrs = cdate.getHours();
+            var mins = cdate.getMinutes();
+            var secs = cdate.getSeconds();
+            
+            if(hrs < 10)
+                hrs="0"+hrs;
+            if(mins < 10)
+                mins = "0"+mins;
+            if(secs < 10)
+                secs = "0"+secs;
+            var str = hrs+":"+mins+":"+secs;
+            document.getElementById("time").innerHTML=str;
+            f = setTimeout(function() { dispTime()} , 1000 );
+        }
+
+        function stopRefresh(){
+            clearTimeout(f);
+        }
+    </script>
+</head>
+<body onload="dispTime()">
+    <div id="time" style="float:left;padding-right: 50px;"></div>
+    <br/><hr/>
+    <button onclick="stopRefresh()"><h3>Stop Refresh</h3></button>
+</body>
+</html>

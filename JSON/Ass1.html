@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+                 $(document).ready(function(){
+                    alert("doc ready");
+                   $("#b1").click(function(){
+                     var url="http://localhost:9000/getEmps";
+                     alert($("#dept").val())
+                     var dno=$("#dept").val();
+                     $.post(url,{deptno:dno},function(data,status){
+                       if(status=="success"){
+                        var emps=JSON.parse(data);
+                        var str="<table border=1>"
+                            for(let i=0;i<emps.length;i++){
+                                 str+="<tr>"
+                                 str+="<td>"+emps[i].empno+"</td>"
+                                 str+="<td>"+emps[i].ename +"</td>"
+                                 str+="<td>"+emps[i].job +"</td>"
+                                 str+="<td>"+emps[i].sal +"</td>"
+                                 str+="<td>"+emps[i].deptno +"</td>"
+                                 str+="</tr>"
+                            }
+                            $("#emps").html(str);    
+                       }
+                     })
+                   })
+                 })
+    </script>
+</head>
+<body>
+    <form action="">
+        Enter DEPT NO :
+        <input type="number" name="deptno" id="dept"><br>
+        <input type="button" value="Get EMPs" id="b1">
+    </form>
+    <div id="emps"></div>
+</body>
+</html>

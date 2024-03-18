@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass1</title>
+</head>
+<script>
+    function replaceAll()
+{
+    var l=document.getElementsByTagName("li")
+   //alert(l[0].firstChild)
+
+    //var photo=["dek.jpg","comp.jpg","fol.jpg","bro.jpg"]
+  
+    for(i=0;i<l.length;i++)
+    {  
+        var neNode=document.createElement("img")
+        neNode.setAttribute("src",l[i].innerText+".jpg");
+        l[i].replaceChild(neNode,l[i].firstChild)
+    }
+}
+
+
+
+</script>
+<body>
+    <ul id="ul1">
+        <li>desktop</li>
+        <li>mycomputer</li>
+        <li>folder</li>
+        <li>browser</li>
+      
+    </ul>
+    
+    <button onclick="replaceAll()">Convert</button>
+</body>
+</html>

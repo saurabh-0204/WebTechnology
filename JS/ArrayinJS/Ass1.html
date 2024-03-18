@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass1</title>
+
+</head>
+<body>
+    <script>
+       // Ask the user for input using prompt
+let userInput = prompt("Enter elements in array:");
+
+// Convert the input string into an array
+let inputArray = userInput.split(',');
+
+// Display the array
+document.write("Original Array"+"<br/>")
+document.write("Array is "+"["+inputArray+"]");
+console.log("Input Array:", inputArray);
+
+
+// let num=prompt("<br/>Enter Number to search in Array");
+//    for(let i=0;i<inputArray.length;i++){
+//     if (inputArray[i]==num) {
+//         document.write("<br/>Element present at "+inputArray.indexOf(num));
+//     } 
+//    }
+    
+    //sorting Element  usings function
+//   function Mysort(a,b){
+//     return a-b;
+//   }
+//   console.log(inputArray.sort(Mysort));
+//  document.write("<br/>"+ " [" +inputArray.sort(Mysort)+" ]");
+
+//sorting using Anonymous function
+document.write("<br/>"+inputArray.sort(function(a,b){
+    return a-b;}));
+
+
+</script>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular Expression</title>
+</head>
+<body>
+    <script>
+        var str="Saurabh";
+        var pattern=/^[A-Z]{1}[a-z]{1,}$/
+        var output=pattern.test(str);
+        document.write("FirstName is :"+ output);
+
+        var name="Saurabh Patil";
+        document.write("<br/>Full Name : "+ name);
+        var pat=/^[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}$/
+        document.write("<br/>Name format is :"+ pat.test(name));
+
+        var mob="+(91)-8720193479"
+        document.write("<br/>Mobile Number : "+ mob);
+        var mobPattern=/^\+\(91\)\-\d{10}$/
+        document.write("<br/>Mobile format is :"+ mobPattern.test(mob));
+
+        var email="saura816@gmail.com"
+        document.write("<br/> Mail : "+ email);
+         var mailPattern=/^[\w]{4,20}@[\w-]{5,15}\.[a-z]{2,3}$/
+         document.write("<br/>Mail format is :"+ mailPattern.test(email));
+
+         var course="PG-DAC";
+         document.write("<br/> course : "+ course);
+         var cpat=/^[A-Z]{2}-[A-Z]{3,8}$/
+         document.write("<br/>Corse format is :"+ cpat.test(course));
+
+
+
+    </script>
+</body>
+</html>

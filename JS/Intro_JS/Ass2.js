@@ -1,0 +1,1 @@
+document.write("Hello From Other JS File");

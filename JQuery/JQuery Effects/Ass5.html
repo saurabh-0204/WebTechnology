@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        h3 {
+            padding-right: 265px;
+            margin: 0px;
+            float: left;
+        }
+
+        p {
+            background-color: #f7f7f7;
+            margin:0px;
+        }
+        button{
+            float:right;
+        }
+
+        div {
+           
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+             $("#b1").click(function(){
+                $("#d1").slideToggle();
+             })
+             $("#b2").click(function(){
+                $("#d2").slideToggle();
+             })
+             $("#b3").click(function(){
+                $("#d3").slideToggle();
+             })
+             $("#b4").click(function(){
+                $("#d4").slideToggle();
+             })
+             $("#b5").click(function(){
+                $("#d5").slideToggle();
+             })
+        })
+    </script>
+</head>
+<body  >
+    <div style="width:500px" id="div1">
+        <div  style="width: 500px; background-color: #e9e7e7;height:25px;">
+            Question One Sample Text
+            <button id="b1">^</button>
+        </div>
+        <div id="d1" style="display: none;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore tempora, illum officia animi delectus quos molestias? Dicta esse corporis eius nulla consequatur in, quis vel atque voluptatem delectus accusantium</p>
+        </div>
+        <div  style="width: 500px; background-color: #e9e7e7;height:25px;">
+           Question two Sample Text
+            <button id="b2">^</button>
+        </div>
+        <div id="d2" style="display:none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore tempora, illum officia animi delectus quos molestias? Dicta esse corporis eius nulla consequatur in, quis vel atque voluptatem delectus accusantium</p>
+        </div>
+        <div  style="width: 500px; background-color: #e9e7e7;height:25px;">
+            Question Three Sample Text
+            <button id="b3">^</button>
+        </div>
+        <div id="d3" style="display:none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore tempora, illum officia animi delectus quos molestias? Dicta esse corporis eius nulla consequatur in, quis vel atque voluptatem delectus accusantium</p>
+        </div>
+        <div  style="width: 500px; background-color: #e9e7e7;height:25px;">
+            Question Four Sample Text
+            <button id="b4">^</button>
+        </div>
+        <div id="d4" style="display:none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore tempora, illum officia animi delectus quos molestias? Dicta esse corporis eius nulla consequatur in, quis vel atque voluptatem delectus accusantium</p>
+        </div>
+        <div  style="width: 500px; background-color: #e9e7e7;height:25px;">
+            Question Five Sample Text
+            <button id="b5">^</button>
+        </div>
+        <div id="d5" style="display:none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore tempora, illum officia animi delectus quos molestias? Dicta esse corporis eius nulla consequatur in, quis vel atque voluptatem delectus accusantium</p>
+        </div>
+    </div>
+</body>
+</html>

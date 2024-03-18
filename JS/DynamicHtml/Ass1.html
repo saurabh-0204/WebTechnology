@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <script>
+        function factorial(num){
+            let fact=1;
+            for(let i=1;i<=num;i++){
+                 fact*=i;
+            }
+            document.getElementById("output").innerHTML="Factorial of "+num +" is "+fact;
+            //document.write("Factorial = "+fact);
+            alert("Factorial = "+fact);
+        }
+    </script>
+    <form >
+        <table  border="2px" style="background-color: rgb(239, 127, 87);height: 100px;" >
+           
+            <tr>
+                <td>Enter number : </td>
+                <td style="background-color: antiquewhite;"><input type="number" name="num"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Enter" onclick="factorial(num.value)">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div style="margin-left: 50px;" id="output"> </div>
+</body>
+</html>

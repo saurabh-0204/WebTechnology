@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function getInfo(){
+        var arr='[{"empid":23,"ename":"shubham","salary":30000,"TeamLead":false,"numbers":[8530702026,9370324542]},{"empid":11,"ename":"lalit","salary":15000,"TeamLead":false,"numbers":[9765086710,28381936]},{"empid":1200,"ename":"omkya","salary":55000,"TeamLead":true,"numbers":[7620156831,7218382393]}]';
+        var emps=JSON.parse(arr);
+              alert(emps.length) 
+        var data="<table border=1>"
+            for(let i=0;i<emps.length;i++){
+                 data+="<tr>";
+                    data+="<td>"+emps[i].empid +"</td>";
+                    data+="<td>"+emps[i].ename +"</td>";
+                    data+="<td>"+emps[i].salary +"</td>";
+                    data+="<td>"+emps[i].TeamLead +"</td>";
+                    data+="<td>"+emps[i].numbers +"</td>";
+                data+="</tr>";
+
+            }
+          data+="</table>"
+          document.getElementById("emptable").innerHTML=data;
+       }
+    </script>
+</head>
+<body onload="getInfo()">
+    <div id="emptable"></div>  
+</body>
+</html>

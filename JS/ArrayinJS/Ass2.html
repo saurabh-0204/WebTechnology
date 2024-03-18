@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var imgarr = ["Desert.jpeg","Hydrangeas.jpg","Jellyfish.jpg","Koala.jpg","Penguins.jpeg"];
+        var index = 0;
+        function previousImg() {
+            index--;
+            if(index == -1)
+                index = imgarr.length - 1;
+            document.getElementById("myimg").src = imgarr[index];
+        }
+
+        function nextImg() {
+            index++;
+            if(index == imgarr.length)
+                index = 0;
+            document.getElementById("myimg").src = imgarr[index];
+        }
+    </script>
+</head>
+<body>
+    <img width="500" height="500"
+    id="myimg" />
+    <br/>
+    <button onclick="previousImg()">Previous</button>
+    <button onclick="nextImg()">Next</button>
+</body>
+</html>

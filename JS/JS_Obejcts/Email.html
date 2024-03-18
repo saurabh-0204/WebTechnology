@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extractMail</title>
+</head>
+<body>
+    <script>
+        function extractEmail(mailstr){
+            var strarr = mailstr.split("@");
+            var str = "User Name : "+strarr[0];
+            str+= "<br/> Domain name : "+strarr[1];
+            document.getElementById("result").innerHTML=str;
+            
+        }
+    </script>
+    <form>
+        <h1><input type="email" name="mailid"
+            placeholder="Enter email" />
+           <input type="button" value="Extract"
+            onclick="extractEmail(mailid.value)" /></h1>
+
+    </form>
+    <div id="result"></div>
+</body>
+</html>

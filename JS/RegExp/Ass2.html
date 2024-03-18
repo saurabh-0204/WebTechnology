@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emailForm</title>
+    <script>
+        function validatedata(){
+                  var check=document.getElementById("mailid").value;
+                  console.log(check);
+                  var mailPattern=/.{4,7}@[\w]{1,3}\.[a-z]{1,5}$/ 
+                 var ok= mailPattern.test(check);
+                  //document.write(ok);
+                  if (!ok) {
+                    document.getElementById("uiderror").innerHTML="Invalid Mail";
+                    document.getElementById("mailid").innerHTML="";
+                    document.getElementById("mailid").focus();
+                    return
+                  } else {
+                   // return
+                   document.getElementById("uiderror").innerHTML = "";
+
+                  }
+                  document.form.submit();
+        }
+    </script>
+</head>
+<body>
+   <form name="form" id="fid" >   
+      <table border="3"  cellspacing="0">
+        <tr >
+            <td colspan="2"><h3><b>visiters Information</b></h3></td>
+        </tr>
+                 <tr>
+                    <td>
+                        Email-ID 
+                    </td>
+                    <td>
+                     <input type="email" name="mail" id="mailid">
+                     <span id="uiderror" style="color:red"></span>
+                     <br/>
+                    </td>
+                 </tr>
+                 <tr>
+                  <td>
+                    Do You use web For
+                   </td>
+                   <td>
+                     <input type="checkbox" name="choice1" value="Research">Research
+                     <input type="checkbox" name="choice2" value="Purchase">Purchase
+                   </td>
+               </tr>   
+               <tr>
+                  <td>
+                     Occupation 
+                  </td>
+                  <td>
+                     <select  name="dropdown" >
+                        <option value="Engineering" >Engineering</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MSC">MSC</option>
+                        <option value="Mtech" selected>M.Tech</option>
+                       </select>
+                  </td>
+               </tr> 
+               
+               <tr>
+                  <td>
+                     Wnant us to send you junk  email?
+                  </td>
+                  <td> <input type="radio" name="spam" value="Absolutely">Absolutely
+                     <input type="radio" name="spam" value="No Way ,Mam">No Way ,Mam
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align: right;"><input type="button" value="submit" onclick="validatedata()" /></td>
+                  <td><input type="reset"></td>
+               </tr>
+    </table>
+   </form>
+</body>
+</html>

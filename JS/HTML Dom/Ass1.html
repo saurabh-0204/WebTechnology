@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <script>
+        function startScroll(){
+            var imgnode=document.getElementById("img1");
+            var move=parseInt(imgnode.style.left)+20;
+            if(move>window.innerWidth)
+               move=200;
+            imgnode.style.left=move+"px";
+            flag=setTimeout(function(){startScroll},500)
+        }
+        function stopScroll(){
+            clearTimeout(flag);
+            var imgnode = document.getElementById("img1");
+            imgnode.style.position = "absolute";
+            imgnode.style.left = "100px";
+            imgnode.style.top = "100px";
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" src="https://foolishdeveloper.com/wp-content/uploads/2021/10/Screenshot-1323-4.jpg" height="250" width="250"  
+     style="position:absolute;top:100px;left:100px;"
+     onclick="startScroll()" onmouseover="stopScroll()"
+    />
+</body>
+</html>

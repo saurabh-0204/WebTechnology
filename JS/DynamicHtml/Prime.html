@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime</title>
+</head>
+<body>
+    <script>
+                        
+                    function table(num){
+        var str="<ul>"    
+       console.log(num);
+          var fact=1;
+        for(let i=1;i<=num;i++)
+        {
+          if (prime(i)&&i>=10) 
+          {
+           str+="<li>"
+            str+=i;
+            str+="<li>";      
+          }
+        }
+        str+="</ul>"
+        document.getElementById("output").innerHTML=str;
+    }
+                 function prime(num){
+                       var cnt=0;
+                       for(let i=1;i<=num;i++){
+                        if(num%i==0)
+                        {
+                            cnt++;
+                        }
+                       }
+                       console.log(cnt);
+                       if (cnt==2) {
+                        return true;
+                       } else {
+                          return false;
+                       
+                       }  
+                 }
+    </script>
+    <form >
+        <table>
+            <tr>
+                <td>
+                    <label for="prime">Enter  Number till you want prime Numbers</label>
+                </td>
+                <td>
+                    <input type="number" name="number" id="prime">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Enter" onclick="table(number.value)"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="output"></div>
+</body>
+</html>

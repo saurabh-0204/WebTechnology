@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageColor</title>
+    <script>
+        function changeColor(node)
+        {
+            document.body.style.backgroundColor=node.innerText
+        }
+    </script>
+</head>
+<body>
+    <div class="press">
+   <button class="btn" id="r" onclick="changeColor(this)">Red</button><br>
+   <button class="btn" id="y" onclick="changeColor(this)">Yellow</button><br>
+   <button class="btn" id="b" onclick="changeColor(this)">Blue</button><br>
+   <button class="btn" id="p" onclick="changeColor(this)">Pink</button><br>
+   <button class="btn" id="g" onclick="changeColor(this)">Green</button><br>
+    </div>
+</body>
+</html>
